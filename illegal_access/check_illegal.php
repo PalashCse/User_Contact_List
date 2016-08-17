@@ -1,0 +1,1 @@
+<?php    if(isset($_SESSION['Token']))	{		$token=$_SESSION['Token'];	}	$result = mysqli_query($db,"select st_id from registraion where Token = '$token'");	$row = mysqli_fetch_array($result);	$stid=$row['st_id'];	if($stid!=$id)	{		header('Location:signin.php');	}?>
